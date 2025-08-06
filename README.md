@@ -16,7 +16,7 @@ Também foi solicitado o desenvolvimento de um **modal para gerenciamento de ben
 
   📌 Exemplo:
 - ![Tela cadastro](Readme/CPFNovo.png)
-- 
+
 - O formulário de cadastro de cliente **não permite a adição de um CPF já existente** no banco de dados.
 
   📌 Exemplo:

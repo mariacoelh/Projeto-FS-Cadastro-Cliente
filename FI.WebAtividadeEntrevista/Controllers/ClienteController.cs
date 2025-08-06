@@ -4,7 +4,6 @@ using FI.WebAtividadeEntrevista.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using WebAtividadeEntrevista.Models;
@@ -17,7 +16,6 @@ namespace WebAtividadeEntrevista.Controllers
         {
             return View();
         }
-
 
         public ActionResult Incluir()
         {
@@ -212,7 +210,6 @@ namespace WebAtividadeEntrevista.Controllers
 
                 List<Cliente> clientes = new BoCliente().Pesquisa(jtStartIndex, jtPageSize, campo, crescente.Equals("ASC", StringComparison.InvariantCultureIgnoreCase), out qtd);
 
-                //Return result to jTable
                 return Json(new { Result = "OK", Records = clientes, TotalRecordCount = qtd });
             }
             catch (Exception ex)

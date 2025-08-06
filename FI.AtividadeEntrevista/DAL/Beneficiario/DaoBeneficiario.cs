@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FI.AtividadeEntrevista.DAL.Beneficiario
 {
     class DaoBeneficiario : AcessoDados
     {
-        /// <summary>
-        /// Inclui um novo beneficiario
-        /// </summary>
-        /// <param name="beneficiario">Objeto de beneficiario</param>
         public long Incluir(DML.Beneficiario beneficiario)
         {
             List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
@@ -28,10 +20,6 @@ namespace FI.AtividadeEntrevista.DAL.Beneficiario
             return ret;
         }
 
-        /// <summary>
-        /// Alterar um beneficiario
-        /// </summary>
-        /// <param name="beneficiario">Objeto de beneficiario</param>
         internal void Alterar(DML.Beneficiario beneficiario)
         {
             List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
@@ -42,10 +30,6 @@ namespace FI.AtividadeEntrevista.DAL.Beneficiario
             base.Executar("FI_SP_AltBeneficiario", parametros);
         }
 
-        /// <summary>
-        /// Consulta lista de beneficiario
-        /// </summary>
-        /// <param name="id">id do cliente</param>
         internal List<DML.Beneficiario> ConsultarListaBeneficiario(long Id)
         {
             List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
@@ -58,10 +42,6 @@ namespace FI.AtividadeEntrevista.DAL.Beneficiario
             return bo;
         }
 
-        /// <summary>
-        /// Excluir Beneficiario
-        /// </summary>
-        /// <param name="cpf">Objeto de beneficiario</param>
         internal void Excluir(string cpf)
         {
             List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();

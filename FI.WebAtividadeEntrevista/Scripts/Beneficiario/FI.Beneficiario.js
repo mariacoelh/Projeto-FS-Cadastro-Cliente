@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('formAddBeneficiario');
     const tabela = document.getElementById('tabelaBeneficiarios');
 
+    let cpfEditando = null;
+
     $('#cpfBeneficiario').on('input', function () {
         $(this).val(mascaraCPF($(this).val()));
     });
@@ -24,33 +26,24 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        let cpfDuplicado = false;
-        $('#tabelaBeneficiarios tr').each(function () {
-            const cpfTabela = $(this).find('td').eq(0).text().trim();
-            if (cpfTabela === cpf) {
-                cpfDuplicado = true;
-                return false; 
-            }
-        });
+        const cpfSemMascara = cpf.replace(/\D/g, '');
+        const cpfJaExiste = beneficiariosList.some(b => b.CPF.replace(/\D/g, '') === cpfSemMascara);
 
-        if (cpfDuplicado) {
+        if (cpfJaExiste && cpfSemMascara !== cpfEditando) {
             ModalDialog("CPF Duplicado", "Este CPF já foi incluído como beneficiário.");
             return;
         }
 
-        const indexExistente = beneficiariosList.findIndex(b => b.CPF.replace(/\D/g, '') === cpf.replace(/\D/g, ''));
-
-        if (indexExistente !== -1) {
-            beneficiariosList[indexExistente].Nome = nome;
-
-            carregarTabelaBeneficiarios();
-
-            inputCPF.value = '';
-            inputNome.value = '';
-            return;
+        if (cpfEditando !== null) {
+            const indexExistente = beneficiariosList.findIndex(b => b.CPF.replace(/\D/g, '') === cpfEditando);
+            if (indexExistente !== -1) {
+                beneficiariosList[indexExistente] = { CPF: cpf, Nome: nome };
+            }
+            cpfEditando = null;
+        } else {
+            beneficiariosList.push({ CPF: cpf, Nome: nome });
         }
 
-        beneficiariosList.push({ CPF: cpf, Nome: nome });
         carregarTabelaBeneficiarios();
         
         inputCPF.value = '';
@@ -60,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $('#modalBeneficiarios').on('hidden.bs.modal', function () {
         inputCPF.value = '';
         inputNome.value = '';
+        cpfEditando = null; // <-- Aqui zera a variável quando fecha o modal
     });
 
     $('#modalBeneficiarios').on('show.bs.modal', function () {
@@ -85,8 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event.target.id === 'btnAlterar') {
             inputCPF.value = cpf;
             inputNome.value = nome;
-
-            linha.remove();
+            cpfEditando = cpf.replace(/\D/g, '');
         }
     });
 
