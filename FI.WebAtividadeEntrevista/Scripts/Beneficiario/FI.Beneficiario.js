@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $('#modalBeneficiarios').on('hidden.bs.modal', function () {
         inputCPF.value = '';
         inputNome.value = '';
-        cpfEditando = null; // <-- Aqui zera a variável quando fecha o modal
+        cpfEditando = null;
     });
 
     $('#modalBeneficiarios').on('show.bs.modal', function () {
