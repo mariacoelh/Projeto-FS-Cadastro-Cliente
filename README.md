@@ -15,19 +15,19 @@ Também foi solicitado o desenvolvimento de um **modal para gerenciamento de ben
 - Cenario de sucesso do cadastro de cliente.
 
   📌 Exemplo:
-- ![Tela cadastro](Readme/00 - Cadastro realizado com sucesso.jpg)
+- ![Tela cadastro](Readme/CPFNovo.png)
 - 
 - O formulário de cadastro de cliente **não permite a adição de um CPF já existente** no banco de dados.
 
   📌 Exemplo:
-  ![Tela cadastro](Readme/01 - CPF já cadastrado.jpg)
+  ![Tela cadastro](Readme/CPFJaCadastrado.png)
 
 - O campo de CPF possui as seguintes regras:
   - Máscara de formatação: `###.###.###-##`
   - Validação baseada no algoritmo de verificação do dígito verificador do CPF.
 
   📌 Exemplo:
-  ![Tela cadastro](Readme/01 - CPF já cadastrado.jpg)
+  ![Tela cadastro](Readme/CPFInvalido.png)
 
 ---
 
@@ -42,10 +42,10 @@ Também foi solicitado o desenvolvimento de um **modal para gerenciamento de ben
   - Não é possível adicionar mais de um beneficiário com o **mesmo CPF** para o **mesmo cliente**.
 
   📌 Exemplo:
-  ![Tela beneficiario](Readme/04  - CPF já pertence ao beneficiario.jpg)
+  ![Tela beneficiario](Readme/CPFBenefExistente.png)
 
   📌 Exemplo de inclusão:
-  ![Tela beneficiario](Readme/03 - Adicionando Beneficiario.jpg)
+  ![Tela beneficiario](Readme/IncluirBeneficiario.png)
 
 ---
 
