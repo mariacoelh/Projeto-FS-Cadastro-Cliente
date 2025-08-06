@@ -60,3 +60,5 @@ msbuild.wrn
 /FI.WebAtividadeEntrevista/bin/FI.AtividadeEntrevista.pdb
 /FI.WebAtividadeEntrevista/bin/FI.WebAtividadeEntrevista.dll
 /FI.WebAtividadeEntrevista/bin/FI.WebAtividadeEntrevista.pdb
+/FI.WebAtividadeEntrevista/App_Data/BancoDeDados.mdf
+/FI.WebAtividadeEntrevista/App_Data/BancoDeDados_log.ldf
