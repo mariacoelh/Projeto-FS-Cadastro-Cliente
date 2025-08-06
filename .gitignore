@@ -1,0 +1,62 @@
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+nupkg/
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# Visual Studio
+.vs/
+
+# Fleet
+.fleet/
+
+# Code Rush
+.cr/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+msbuild.log
+msbuild.err
+msbuild.wrn
+/.vs/FI.WebAtividadeEntrevista/CopilotIndices/17.14.734.62261/SemanticSymbols.db
+/.vs/FI.WebAtividadeEntrevista/CopilotIndices/17.14.734.62261/CodeChunks.db
+/.vs/FI.WebAtividadeEntrevista/v17/.suo
+/.vs/FI.WebAtividadeEntrevista/v17/DocumentLayout.backup.json
+/.vs/FI.WebAtividadeEntrevista/v17/DocumentLayout.json
+/FI.AtividadeEntrevista/bin/Debug/FI.AtividadeEntrevista.dll
+/FI.AtividadeEntrevista/bin/Debug/FI.AtividadeEntrevista.pdb
+/FI.AtividadeEntrevista/obj/Debug/FI.AtividadeEntrevista.csproj.AssemblyReference.cache
+/FI.AtividadeEntrevista/obj/Debug/FI.AtividadeEntrevista.dll
+/FI.AtividadeEntrevista/obj/Debug/FI.AtividadeEntrevista.csproj.CoreCompileInputs.cache
+/FI.AtividadeEntrevista/obj/Debug/FI.AtividadeEntrevista.pdb
+/FI.WebAtividadeEntrevista/bin/FI.AtividadeEntrevista.dll
+/FI.WebAtividadeEntrevista/obj/Debug/FI.WebAtividadeEntrevista.dll
+/FI.WebAtividadeEntrevista/obj/Debug/FI.WebAtividadeEntrevista.csproj.AssemblyReference.cache
+/FI.WebAtividadeEntrevista/obj/Debug/FI.WebAtividadeEntrevista.csproj.CoreCompileInputs.cache
+/FI.WebAtividadeEntrevista/obj/Debug/FI.WebAtividadeEntrevista.pdb
+/FI.WebAtividadeEntrevista/bin/FI.AtividadeEntrevista.pdb
+/FI.WebAtividadeEntrevista/bin/FI.WebAtividadeEntrevista.dll
+/FI.WebAtividadeEntrevista/bin/FI.WebAtividadeEntrevista.pdb
