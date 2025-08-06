@@ -1,51 +1,49 @@
 ﻿using System.Collections.Generic;
-using FI.AtividadeEntrevista.DAL;
-using FI.AtividadeEntrevista.DML;
 
 namespace FI.AtividadeEntrevista.BLL
 {
     public class BoCliente
     {
-        public long Incluir(Cliente cliente)
+        public long Incluir(DML.Cliente cliente)
         {
-            DaoCliente daoCliente = new DaoCliente();
-            return daoCliente.Incluir(cliente);
+            DAL.DaoCliente cli = new DAL.DaoCliente();
+            return cli.Incluir(cliente);
         }
 
-        public void Alterar(Cliente cliente)
+        public void Alterar(DML.Cliente cliente)
         {
-            DaoCliente daoCliente = new DaoCliente();
-            daoCliente.Alterar(cliente);
+            DAL.DaoCliente cli = new DAL.DaoCliente();
+            cli.Alterar(cliente);
         }
 
-        public Cliente Consultar(long id)
+        public DML.Cliente Consultar(long id)
         {
-            DaoCliente daoCliente = new DaoCliente();
-            return daoCliente.Consultar(id);
+            DAL.DaoCliente cli = new DAL.DaoCliente();
+            return cli.Consultar(id);
         }
 
         public void Excluir(long id)
         {
-            DaoCliente daoCliente = new DaoCliente();
-            daoCliente.Excluir(id);
+            DAL.DaoCliente cli = new DAL.DaoCliente();
+            cli.Excluir(id);
         }
 
-        public List<Cliente> Listar()
+        public List<DML.Cliente> Listar()
         {
-            DaoCliente daoCliente = new DaoCliente();
-            return daoCliente.Listar();
+            DAL.DaoCliente cli = new DAL.DaoCliente();
+            return cli.Listar();
         }
 
-        public List<Cliente> Pesquisa(int iniciarEm, int quantidade, string campoOrdenacao, bool crescente, out int qtd)
+        public List<DML.Cliente> Pesquisa(int iniciarEm, int quantidade, string campoOrdenacao, bool crescente, out int qtd)
         {
-            DaoCliente daoCliente = new DaoCliente();
-            return daoCliente.Pesquisa(iniciarEm, quantidade, campoOrdenacao, crescente, out qtd);
+            DAL.DaoCliente cli = new DAL.DaoCliente();
+            return cli.Pesquisa(iniciarEm,  quantidade, campoOrdenacao, crescente, out qtd);
         }
 
         public bool VerificarExistencia(string CPF)
         {
-            DaoCliente daoCliente = new DaoCliente();
-            return daoCliente.VerificarExistencia(CPF);
+            DAL.DaoCliente cli = new DAL.DaoCliente();
+            return cli.VerificarExistencia(CPF);
         }
     }
 }

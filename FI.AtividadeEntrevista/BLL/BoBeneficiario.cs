@@ -1,33 +1,31 @@
 ﻿using System.Collections.Generic;
-using FI.AtividadeEntrevista.DAL;
-using FI.AtividadeEntrevista.DML;
 
 namespace FI.AtividadeEntrevista.BLL
 {
     public class BoBeneficiario
     {
-        public long Incluir(Beneficiario beneficiario)
+        public long Incluir(DML.Beneficiario beneficiario)
         {
-            DaoBeneficiario daoBeneficiario = new DaoBeneficiario();
-            return daoBeneficiario.Incluir(beneficiario);
+            DAL.Beneficiario.DaoBeneficiario bo = new DAL.Beneficiario.DaoBeneficiario();
+            return bo.Incluir(beneficiario);
         }
 
-        public void Alterar(Beneficiario beneficiario)
+        public void Alterar(DML.Beneficiario beneficiario)
         {
-            DaoBeneficiario daoBeneficiario = new DaoBeneficiario();
-            daoBeneficiario.Alterar(beneficiario);
+            DAL.Beneficiario.DaoBeneficiario bo = new DAL.Beneficiario.DaoBeneficiario();
+            bo.Alterar(beneficiario);
         }
 
-        public List<Beneficiario> ConsultarListaBeneficiario(long id)
+        public List<DML.Beneficiario> ConsultarListaBeneficiario(long id)
         {
-            DaoBeneficiario daoBeneficiario = new DaoBeneficiario();
-            return daoBeneficiario.ConsultarListaBeneficiario(id);
+            DAL.Beneficiario.DaoBeneficiario bo = new DAL.Beneficiario.DaoBeneficiario();
+            return bo.ConsultarListaBeneficiario(id);
         }
 
         public void Excluir(string cpf)
         {
-            DaoBeneficiario daoBeneficiario = new DaoBeneficiario();
-            daoBeneficiario.Excluir(cpf);
+            DAL.Beneficiario.DaoBeneficiario bo = new DAL.Beneficiario.DaoBeneficiario();
+            bo.Excluir(cpf);
         }
     }
 }
