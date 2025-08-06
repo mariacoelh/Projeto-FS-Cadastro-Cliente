@@ -1,5 +1,4 @@
-﻿
-$(document).ready(function () {
+﻿$(document).ready(function () {
     $('#formCadastro').submit(function (e) {
         e.preventDefault();
         $.ajax({
@@ -51,7 +50,7 @@ function ModalDialog(titulo, texto) {
         '                </div>                                                                                             ' +
         '            </div><!-- /.modal-content -->                                                                         ' +
         '  </div><!-- /.modal-dialog -->                                                                                    ' +
-        '</div> <!-- /.modal -->                                                                                        ';
+        '</div> <!-- /.modal -->                                                                                            ';
 
     $('body').append(texto);
     $('#' + random).modal('show');
